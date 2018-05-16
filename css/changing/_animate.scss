@@ -1,0 +1,35 @@
+header .animate {
+    position: absolute;
+    width: 80%;
+    animation: move 1.5s ease-out;
+    animation-fill-mode: forwards;
+    h1 {
+        text-transform: uppercase;
+        font-size: 70px;
+        color: $header-color;
+        &::after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            max-width: 40%;
+            padding-top: 2vw;
+            border-bottom: 1px solid $color-gold;   
+        }
+    }
+    h3 {
+        font-size: 30px;
+        color: $header-color;
+        margin-top: 2vw;
+        line-height: 1.5;
+    }
+    @keyframes move {
+        0% {top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        100% {top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

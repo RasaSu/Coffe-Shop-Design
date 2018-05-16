@@ -1,0 +1,105 @@
+@import "../reset/reset";
+@import "../style/style";
+@import "../layouts/reservations";
+@import "../layouts/promotions";
+header {
+    margin-left: $content-ml;
+    width: $content-width;
+    height: 100vh;
+    background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/banner-image1.jpg") center fixed no-repeat;
+    background-size: cover;
+    position: relative;
+    img {
+        position: absolute;
+        animation: move 1.5s ease-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes move {
+        0% {top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        100% {top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+article {
+    margin-left: $content-ml;
+    font-size: 0;
+    width: $content-width;
+    .about {
+        background-color: $footer-color;
+        box-sizing: border-box;
+        display: table-cell;
+        width: 65%;
+        text-align: justify;
+        vertical-align: top;
+        padding: 4vw;
+        h6 {
+            font-size: 14px;
+            color: $color-gold;
+            text-transform: uppercase;
+            padding-top: 2vw;
+            &::after {
+                content: "";
+                display: block;
+                max-width: 30%;
+                padding-top: 2vw;
+                border-bottom: 1px solid $color-gold; 
+            }
+        }
+        p {
+            font-size: 14px;
+            color: $text-color;
+            line-height: 2;
+        }
+        .button {
+            display: inline-block;
+            font-size: 14px;
+            color: $header-color;
+            background-color: $footer-color;
+            text-transform: uppercase;
+            border: 1px solid $header-color;
+            cursor: pointer;
+            margin-top: 3vw;
+            padding: 1.5vw 3vw;
+        }
+        img {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 3vw;
+            padding-top: 3vw;
+            &:first-of-type {
+                margin-right: 1.5vw;
+            }
+        }
+    }
+    .rightSide {
+        display: table-cell;
+        background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-background2.jpg") top left no-repeat;
+        background-size: cover;
+        width: 35%;
+        height: 100%;
+    }
+    h2 {
+        font-size: 40px;
+        color:$header-color;
+        text-transform: uppercase;
+    }
+}
+@import "../changing/media";
+@media (max-width: 1023px) {
+    article .about {
+        display: block;
+        width: 100%;
+        padding: 10vw;
+    }
+    article .rightSide {
+        display: block;
+        width: 100%;
+        height: 900px;
+    }
+}

@@ -1,0 +1,482 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  font-size: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.mediaIcons {
+  display: inline-block;
+  margin: 1vw 0 3vw;
+}
+
+.mediaIcons a {
+  padding-right: 1vw;
+  color: #5d646b;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.mediaIcons .icon-background {
+  color: #3b4045;
+}
+
+.mediaIcons a.fcb:hover .icon-background {
+  color: #34383d;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+.mediaIcons a.fcb:hover::after {
+  content: "Facebook";
+  display: block;
+  font-size: 12px;
+  padding-top: 35px;
+}
+
+.mediaIcons a.twitter:hover .icon-background {
+  color: #34383d;
+}
+
+.mediaIcons a.twitter:hover::after {
+  content: "Twitter";
+  display: block;
+  font-size: 12px;
+  padding-top: 35px;
+}
+
+.mediaIcons a.instagram:hover .icon-background {
+  color: #34383d;
+}
+
+.mediaIcons a.instagram:hover::after {
+  content: "Instagram";
+  display: block;
+  font-size: 12px;
+  padding-top: 35px;
+}
+
+.mediaIcons a.google:hover .icon-background {
+  color: #34383d;
+}
+
+.mediaIcons a.google:hover::after {
+  content: "Google+";
+  display: block;
+  font-size: 12px;
+  padding-top: 35px;
+}
+
+nav.mediaNav {
+  display: none;
+}
+
+nav {
+  width: 25%;
+  height: 100%;
+  background-color: #292c30;
+  color: #fff;
+  position: fixed;
+  text-align: center;
+  border: 1px solid #313539;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+nav::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+nav .navigationItems .logo {
+  display: inline-block;
+  margin: 3vw 0;
+}
+
+nav .navigationItems li {
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid #313539;
+  padding: 1.5vw 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+nav .navigationItems li:last-of-type {
+  border-bottom: 1px solid #313539;
+}
+
+nav .navigationItems li:hover {
+  color: #ae895d;
+  transition-duration: 0.5s;
+}
+
+nav .navigationItems .current {
+  border-right: 3px solid #ae895d;
+}
+
+nav.mediaNav {
+  display: none;
+  width: 100%;
+  position: relative;
+  height: auto;
+  z-index: 1;
+}
+
+nav.mediaNav .navWrapper {
+  height: 120px;
+  background-color: #292c30;
+}
+
+nav.mediaNav .navWrapper .leftSide {
+  float: left;
+  line-height: 120px;
+}
+
+nav.mediaNav .navWrapper .leftSide img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+nav.mediaNav .navWrapper .rightSide {
+  float: right;
+  line-height: 120px;
+}
+
+nav.mediaNav .navWrapper .rightSide .navButton {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+nav.mediaNav .navWrapper .rightSide .navButton div {
+  border-bottom: 3px solid #ae895d;
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+nav.mediaNav #navList {
+  display: none;
+}
+
+nav.mediaNav #navList li {
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid #24292d;
+  padding: 3vw 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+nav.mediaNav #navList li:last-of-type {
+  border-bottom: 1px solid #24292d;
+}
+
+nav.mediaNav #navList li:hover {
+  background-color: #313539;
+  transition-duration: 1s;
+}
+
+nav.mediaNav #navList .current {
+  background-color: #2b3136;
+}
+
+footer {
+  margin-left: 25%;
+  width: 75%;
+  background-color: #313539;
+  box-sizing: border-box;
+  padding: 5vw 3vw 2vw;
+  text-align: center;
+  overflow: auto;
+}
+
+footer .contactWrapper {
+  margin-top: 5vw;
+  border-top: 1px solid #45494e;
+  border-bottom: 1px solid #45494e;
+  padding: 5vw 0;
+}
+
+footer .contactWrapper .email, footer .contactWrapper .number, footer .contactWrapper .adress {
+  display: inline-block;
+  color: #747474;
+  font-size: 14px;
+}
+
+footer .contactWrapper .email, footer .contactWrapper .number {
+  padding-right: 10vw;
+}
+
+footer .contactWrapper i {
+  color: #ae895d;
+  font-size: 20px;
+}
+
+footer .contactWrapper h6 {
+  color: #fff;
+  padding: 2vw 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+footer .mediaIcons {
+  margin-top: 5vw;
+  position: relative;
+  float: right;
+}
+
+@media (max-width: 1023px) {
+  footer .contactWrapper .email, footer .contactWrapper .number, footer .contactWrapper .adress {
+    display: block;
+    padding-right: 0;
+    padding-bottom: 5vw;
+  }
+  footer .mediaIcons {
+    float: none;
+  }
+}
+
+section.reservation {
+  background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/parallax-11.jpg") center no-repeat;
+  background-size: cover;
+  margin-left: 25%;
+  width: 75%;
+  text-align: center;
+  padding: 15vw 3vw;
+  box-sizing: border-box;
+}
+
+section.reservation p {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 2vw;
+  line-height: 1.5;
+}
+
+section.reservation p:before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  max-width: 20%;
+  border-top: 1px solid #ae895d;
+  padding-bottom: 2vw;
+}
+
+section.reservation p span {
+  color: #ae895d;
+}
+
+section.reservation h2 {
+  margin-bottom: 2vw;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+article {
+  margin-left: 25%;
+  width: 75%;
+  font-size: 0;
+}
+
+article .leftSide {
+  background-color: #313539;
+  box-sizing: border-box;
+  display: table-cell;
+  width: 50%;
+  text-align: justify;
+  vertical-align: top;
+  padding: 4vw;
+}
+
+article .leftSide p {
+  font-size: 14px;
+  color: #aaa9a9;
+  line-height: 2;
+}
+
+article .leftSide .button {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  background-color: #313539;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-top: 3vw;
+  padding: 1.5vw 3vw;
+}
+
+article .leftSide img {
+  width: 300px;
+  margin-bottom: 1.5vw;
+}
+
+article .leftSide img:first-of-type {
+  margin-right: 2vw;
+}
+
+article .rightSide {
+  display: table-cell;
+  background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-21.jpg") top left no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+section.contactUs {
+  margin-left: 25%;
+  width: 75%;
+  font-size: 0;
+  background-color: #292c30;
+  text-align: center;
+  padding: 10vw 5vw;
+  box-sizing: border-box;
+}
+
+section.contactUs h1 {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 2vw;
+}
+
+section.contactUs h6 {
+  color: #ae895d;
+  font-size: 14px;
+  margin-bottom: 4vw;
+}
+
+section.contactUs h6::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #ae895d;
+  margin: 0 auto;
+  width: 20%;
+  padding-top: 2vw;
+}
+
+section.contactUs input, section.contactUs select, section.contactUs textarea {
+  padding: 20px;
+  box-sizing: border-box;
+  color: #aaa9a9;
+  background-color: #313539;
+  margin: 0 2vw 2vw 2vw;
+  font-size: 14px;
+  border: none;
+}
+
+section.contactUs input, section.contactUs select {
+  display: inline-block;
+  width: calc(50% - 4vw);
+}
+
+section.contactUs textarea {
+  width: calc(100% - 4vw);
+  height: 15vw;
+}
+
+section.contactUs input.button {
+  width: calc(100% - 4vw);
+  background-color: #292c30;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media (max-width: 1023px) {
+  nav {
+    display: none;
+  }
+  nav.mediaNav {
+    display: block;
+  }
+  header, article, section, section.reservation, section.promotions, article.aboutFood,
+  article.aboutIngredients, article.aboutDrinks, article.menu, article.drinks, section.locations,
+  section.cities, section.contactUs, #map, footer {
+    margin-left: 0;
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  article .leftSide, article .rightSide {
+    width: 100%;
+    display: block;
+  }
+  article .leftSide {
+    padding: 10vw;
+  }
+  article .leftSide img {
+    margin-bottom: 5vw;
+  }
+  article .rightSide {
+    height: 600px;
+  }
+  section.contactUs {
+    padding: 10vw;
+  }
+  section.contactUs input, section.contactUs select, section.contactUs textarea, section.contactUs input.button {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

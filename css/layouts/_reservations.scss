@@ -1,0 +1,42 @@
+
+$color-gold: #ae895d;
+$header-color: #fff;
+
+$content-width: 75%;
+$content-ml: 25%;
+
+section.reservation {
+    background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/parallax-11.jpg") center no-repeat;
+    background-size: cover;
+    margin-left: $content-ml;
+    width: $content-width;
+    text-align: center;
+    padding: 15vw 3vw;
+    box-sizing: border-box;
+    p {
+        font-size: 30px;
+        color: $header-color;
+        text-transform: uppercase;
+        margin-top: 2vw;
+        line-height: 1.5;
+        &:before {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            max-width: 20%;
+            border-top: 1px solid $color-gold; 
+            padding-bottom: 2vw;
+        }
+        span {
+            color: $color-gold;
+        }
+    }
+    h2 {
+        margin-bottom: 2vw;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: $header-color;
+    }
+   
+}
+

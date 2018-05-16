@@ -1,0 +1,120 @@
+@import "../reset/reset";
+@import "../style/style";
+@import "../layouts/reservations";
+article {
+    margin-left: $content-ml;
+    width: $content-width;
+    font-size: 0;
+    .leftSide {
+        background-color: $footer-color;
+        box-sizing: border-box;
+        display: table-cell;
+        width: 50%;
+        text-align: justify;
+        vertical-align: top;
+        padding: 4vw;
+        p {
+            font-size: 14px;
+            color: $text-color;
+            line-height: 2;
+        }
+        .button {
+            display: inline-block;
+            font-size: 14px;
+            color: $header-color;
+            background-color: $footer-color;
+            text-transform: uppercase;
+            border: 1px solid $header-color;
+            cursor: pointer;
+            margin-top: 3vw;
+            padding: 1.5vw 3vw;
+        }
+        img {
+            width: 300px;
+            margin-bottom: 1.5vw;
+            &:first-of-type {
+                margin-right: 2vw;
+            }
+        }
+    }
+    .rightSide {
+        display: table-cell;
+        background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-21.jpg") top left no-repeat;
+        background-size: cover;
+        width: 50%;
+    }
+}
+section.contactUs {
+    margin-left: $content-ml;
+    width: $content-width;
+    font-size: 0;
+    background-color: $bg-color;
+    text-align: center;
+    padding: 10vw 5vw;
+    box-sizing: border-box;
+    h1 {
+        color: $header-color;
+        font-size: 50px;
+        margin-bottom: 2vw;
+    }
+    h6 {
+        color: $color-gold;
+        font-size: 14px;
+        margin-bottom: 4vw;
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid $color-gold;
+            margin: 0 auto;
+            width: 20%;
+            padding-top: 2vw;
+        }
+    }
+    input, select, textarea {
+        padding: 20px;
+        box-sizing: border-box;
+        color: $text-color;
+        background-color: $footer-color;
+        margin: 0 2vw 2vw 2vw; 
+        font-size: 14px;
+        border: none;
+    }
+    input, select {
+        display: inline-block;
+        width: calc(50% - 4vw);      
+    }
+    textarea {
+        width: calc(100% - 4vw);
+        height: 15vw;
+    }
+    input.button {
+        width: calc(100% - 4vw);
+        background-color: $bg-color;
+        border: 1px solid $header-color;
+        color: $header-color;
+    }
+}
+@import "../changing/media";
+@media (max-width: 1023px) {
+    article {
+        .leftSide, .rightSide {
+            width: 100%;
+            display: block;
+        }
+        .leftSide {
+            padding: 10vw;
+            img {
+                margin-bottom: 5vw;
+            }
+        }
+        .rightSide {
+            height: 600px;
+        }
+    }
+    section.contactUs {
+        padding: 10vw;
+        input, select, textarea, input.button {
+            width: 100%;
+        }
+    }
+}

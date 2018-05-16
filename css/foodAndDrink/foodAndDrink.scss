@@ -1,0 +1,159 @@
+@import "../reset/reset";
+@import "../style/style";
+@import "../layouts/reservations";
+@import "../layouts/promotions";
+@import "../changing/animate";
+header {
+    margin-left: $content-ml;
+    width: $content-width;
+    background: url('https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/food-drink-banner1.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+%rightSide {
+    display: table-cell;
+    width: 35%;
+    vertical-align: top;
+    background-size: cover;
+    .promo {
+        padding: 2vw;
+        background-color: $bg-color;
+        box-sizing: border-box;
+        h6 {
+            font-size: 14px;
+            color: $color-gold;
+        }
+        h4 {
+            font-size: 30px;
+            color: $header-color;
+            padding-top: 1vw;
+        }
+    }
+}
+%h3 {
+    font-size: 50px;
+    color: $header-color;
+    &::after {
+        content: "";
+        display: block;
+        max-width: 30%;
+        padding-top: 1vw;
+        border-bottom: 1px solid $color-gold;
+    }
+}
+article.menu {
+    margin-left: $content-ml;
+    width: $content-width;
+    font-size: 0;
+    display: table;
+    .leftSide {
+        padding: 5vw;
+        width: 65%;
+        box-sizing: border-box;
+        background-color: $footer-color;
+        display: table-cell;
+        h3 {
+            @extend %h3;
+        }
+        h4 {
+            font-size: 30px;
+            color: $header-color;
+            margin-top: 3vw;
+        }
+        h6 {
+            font-size: 14px;
+            color: $color-gold;
+            margin-top: 1vw;
+        }
+    }
+        .starters {
+            @extend %rightSide;
+            background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/starter-menu1.jpg") top left no-repeat;
+        }
+        .mainCourse {
+            @extend %rightSide;
+            background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/main-menu1.jpg") top left no-repeat;
+        }
+        .desserts {
+            @extend %rightSide;
+            background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/footer-31.jpg") no-repeat;
+            background-size: auto 100%;
+        }
+}
+article.drinks {
+    margin-left: $content-ml;
+    width: $content-width;
+    font-size: 0;
+    display: table;
+    .leftSection {
+        font-size: 0;
+        padding: 5vw;
+        width: 32.5%;
+        box-sizing: border-box;
+        background-color: $footer-color;
+        display: table-cell;
+        h3 {
+            @extend %h3;
+        }
+        p {
+            color: $text-color;
+            line-height: 2;
+            font-size: 14px;
+            padding-top: 4vw;
+        }
+    }
+    .middleSection {
+        font-size: 0;
+        background-color: $bg-color;
+        width: 32.5%;
+        display: table-cell;
+        box-sizing: border-box;
+        padding: 3vw;
+        li {
+            font-size: 16px;
+            color: $header-color;
+            padding: 1vw;
+        }
+    }
+    .rightSection {
+        font-size: 0;
+        width: 35%;
+        display: table-cell;
+        background: url('https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-1-1.jpg') center no-repeat;
+        background-size: cover;
+    }
+}
+@import "../changing/media";
+@media (max-width: 1023px) {
+    article.menu {
+        .leftSide, .starters, .mainCourse, .desserts {
+            display: block;
+            width: 100%;
+        }
+        .leftSide {
+            padding: 10vw;
+        }
+        .starters, .mainCourse, .desserts {
+            height: 700px;
+            .promo {
+                padding: 10vw;
+            }
+        }
+    }
+    article.drinks {
+        .leftSection, .middleSection, .rightSection {
+            display: block;
+            width: 100%;
+        }
+        .leftSection, .middleSection {
+            padding: 10vw;
+        }
+        .rightSection {
+            height: 700px;
+        }
+    }
+}

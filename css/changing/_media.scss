@@ -1,0 +1,15 @@
+@media (max-width: 1023px) {
+     nav {
+         display: none;
+     }
+     nav.mediaNav {
+         display: block;
+     }
+     header, article, section, section.reservation, section.promotions, article.aboutFood, 
+     article.aboutIngredients, article.aboutDrinks, article.menu, article.drinks, section.locations,
+     section.cities, section.contactUs, #map, footer{
+         margin-left: 0;
+         width: 100%;
+         display: block;
+     }
+}

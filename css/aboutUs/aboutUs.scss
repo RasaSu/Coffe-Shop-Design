@@ -1,0 +1,135 @@
+@import "../reset/reset";
+@import "../style/style";
+@import "../layouts/promotions";
+@import "../changing/animate";
+header {
+    margin-left: $content-ml;
+    width: $content-width;
+    height: 100vh;
+    background: url('https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-us-banner.jpg') top left fixed no-repeat;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+%picture {
+    background-size: cover;
+    display: table-cell;
+    width:50%;
+}
+%article {
+    margin-left: $content-ml;
+    width: $content-width;
+    font-size: 0;
+    display: table;
+}
+
+article {
+    .textWrapper {
+            display: table-cell;
+            width: 50%;
+            padding: 5vw;
+            box-sizing: border-box;
+            background-color: $bg-color;
+            h3 {
+                color: $header-color;
+                font-size: 30px;
+            }
+            h6 {
+                color: $color-gold;
+                font-size: 14px;
+                padding-top: 1vw;
+                &::after {
+                    content: "";
+                    display: block;
+                    max-width: 20%;
+                    padding-top: 2vw;
+                    border-bottom: 1px solid $color-gold;
+                }
+            }
+            p {
+                color: $text-color;
+                font-size: 14px;
+                line-height: 2;
+                padding-top: 3vw;
+            }
+            ul {
+                padding-top: 2vw;
+                li {
+                    color: $text-color;
+                    font-size: 14px;
+                    line-height: 2;
+                    list-style-image: url('https://changal.com/assets/svg/gray-border-star.svg');
+                }
+            }
+        }
+}
+article.aboutFood {
+    @extend %article;
+    .textWrapper {
+        background-color: $footer-color;
+    }
+    .foodPicture {
+        @extend %picture;
+        background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-11.jpg") center no-repeat;
+        } 
+}    
+article.aboutIngredients {
+    @extend %article;
+    .ingredientsPicture {
+        @extend %picture;
+        background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-21.jpg") center no-repeat;
+        } 
+}   
+article.aboutDrinks {
+    @extend %article;
+    .drinksPicture {
+        @extend %picture;
+        background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/about-3-1.jpg") center no-repeat;
+        } 
+}  
+@import "../changing/media";
+@media (max-width: 1023px) {
+    header {
+        height: 500px;
+        padding: 15vw 5vw;
+    }
+    article.aboutFood {
+        .textWrapper, .foodPicture {
+            display: block;
+            width: 100%;
+        }
+        .textWrapper {
+            padding: 10vw;
+        }
+        .foodPicture {
+            height: 600px;
+        }
+    }
+    article.aboutIngredients {
+        .textWrapper, .ingredientsPicture {
+            display: block;
+            width: 100%;
+        }
+        .textWrapper {
+            padding: 10vw;
+        }
+        .ingredientsPicture {
+            height: 600px;
+        }
+    }
+    article.aboutDrinks {
+        .textWrapper, .drinksPicture {
+            display: block;
+            width: 100%;
+        }
+        .textWrapper {
+            padding: 10vw;
+        }
+        .drinksPicture {
+            height: 600px;
+        }
+    }
+}
+        

@@ -1,0 +1,117 @@
+$bg-color: #292c30;
+$footer-color: #313539;
+$bg-icon: #3b4045;
+$icon-color: #5d646b;
+$color-gold: #ae895d;
+$text-color: #aaa9a9;
+$header-color: #fff;
+$border-color: #45494e;
+$section-dark: rgb(36, 41, 45);
+$section-light: rgb(43, 49, 54);
+$contact-color: #747474;
+
+$font: 'Roboto Condensed', sans-serif;
+$content-width: 75%;
+$content-ml: 25%;
+
+section.promotions {
+        margin-left: $content-ml;
+        width: $content-width;
+        font-size: 0;
+        .leftSide {
+            width: 50%;
+            background-color: $section-dark;
+            padding: 4vw 3vw;
+            box-sizing: border-box;
+            display: table-cell;
+            h6 {
+                font-size: 14px;
+                color: $color-gold;
+            }
+            span {
+                font-size: 14px;
+                color: $text-color;
+                padding-left: 1vw;
+            } 
+            h3 {
+                font-size: 30px;
+                color: $header-color;
+                line-height: 1.5;
+                &:after {
+                    content: "";
+                    display: block;
+                    max-width: 40%;
+                    padding-top: 1vw;
+                    border-bottom: 1px solid $color-gold;
+                }
+            }
+        }
+        .rightSide {
+            width: 50%;
+            background-color: $section-light;
+            padding: 4vw 3vw;
+            box-sizing: border-box;
+            display: table-cell;
+            h6 {
+                font-size: 14px;
+                color: $color-gold;
+            }
+            span {
+                font-size: 14px;
+                color: $text-color;
+                padding-left: 1vw;
+            } 
+            h3 {
+                font-size: 30px;
+                color: $header-color;
+                line-height: 1.5;
+                &:after {
+                    content: "";
+                    display: block;
+                    max-width: 40%;
+                    padding-top: 1vw;
+                    border-bottom: 1px solid $color-gold;
+                }
+            }
+        }
+        img {
+            display: inline-block;
+            width: 25%;
+        }
+        .newStore, .latestNews, .foodSpecial, .wifi {
+            display: table-cell;
+            box-sizing: border-box;
+            width: 25%;
+            padding: 2vw 2vw 3vw;
+            h6 {
+                color: $color-gold;
+                font-size: 16px;
+            }
+            h3 {
+                color: $header-color;
+                font-size: 30px;
+                line-height: 1;
+                padding-top: 1vw;
+            }
+        }
+        .newStore, .foodSpecial {
+            background-color: $section-dark;
+        }
+        .latestNews, .wifi {
+            background-color: $section-light;
+        }
+}
+
+@media (max-width: 1023px) {
+    section.promotions {
+        .rightSide, .leftSide, .newStore, .latestNews, .foodSpecial, .wifi {
+            display: block;
+            width: 100%;
+            padding: 10vw;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
