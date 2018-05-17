@@ -3,6 +3,7 @@
 @import "../layouts/promotions";
 @import "../changing/animate";
 header {
+    background-color: $bg-color;
     margin-left: $content-ml;
     width: $content-width;
     height: 100vh;
@@ -91,10 +92,10 @@ article.aboutDrinks {
 }  
 @import "../changing/media";
 @media (max-width: 1023px) {
-    header {
-        height: 500px;
-        padding: 15vw 5vw;
-    }
+    // header {
+    //     height: 500px;
+    //     padding: 15vw 5vw;
+    // }
     article.aboutFood {
         .textWrapper, .foodPicture {
             display: block;

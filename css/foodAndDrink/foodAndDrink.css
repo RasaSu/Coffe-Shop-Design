@@ -494,6 +494,7 @@ header .animate h3 {
 }
 
 header {
+  background-color: #292c30;
   margin-left: 25%;
   width: 75%;
   background: url("https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/food-drink-banner1.jpg") center no-repeat;

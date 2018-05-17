@@ -456,6 +456,7 @@ header .animate h3 {
 }
 
 header {
+  background-color: #292c30;
   margin-left: 25%;
   width: 75%;
   height: 100vh;
@@ -557,10 +558,6 @@ article.aboutDrinks .drinksPicture {
 }
 
 @media (max-width: 1023px) {
-  header {
-    height: 500px;
-    padding: 15vw 5vw;
-  }
   article.aboutFood .textWrapper, article.aboutFood .foodPicture {
     display: block;
     width: 100%;

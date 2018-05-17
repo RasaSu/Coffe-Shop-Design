@@ -303,6 +303,7 @@ section.locations h3, section.cities .cityWrapper h3 {
 }
 
 #map {
+  background-color: #292c30;
   margin-left: 25%;
   width: 75%;
   height: 600px;

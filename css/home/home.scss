@@ -3,6 +3,7 @@
 @import "../layouts/reservations";
 @import "../layouts/promotions";
 header {
+    background-color: $bg-color;
     margin-left: $content-ml;
     width: $content-width;
     height: 100vh;

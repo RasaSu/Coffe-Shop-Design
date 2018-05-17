@@ -4,6 +4,7 @@
 @import "../layouts/promotions";
 @import "../changing/animate";
 header {
+    background-color: $bg-color;
     margin-left: $content-ml;
     width: $content-width;
     background: url('https://avada.theme-fusion.com/cafe/wp-content/uploads/sites/17/2015/02/food-drink-banner1.jpg') center no-repeat;
